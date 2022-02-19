@@ -1,0 +1,8 @@
+sudo: required
+services:
+  - docker
+before_install:
+  - cd client
+  - docker build -t wildanazz/web-docker-client -f Dockerfile.dev .
+script:
+  - docker run --env CI=true wildanazz/web-docker-client npm run test

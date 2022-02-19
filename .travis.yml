@@ -2,9 +2,6 @@ sudo: required
 services:
   - docker
 before_install:
-  - pwd
   - cd client && docker build -t wildanazz/web-docker-client -f Dockerfile.dev .
-before_script:
-  - pwd
 script:
   - docker run --env CI=true wildanazz/web-docker-client npm run test

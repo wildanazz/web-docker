@@ -9,10 +9,10 @@ deploy:
   provider: elasticbeanstalk
   access_key_id: "$AWS_ACCESS_KEY"
   secret_access_key: "$AWS_SECRET_KEY"
-  region: "us-east-1"
+  region: "ap-southeast-2"
   app: "web-docker"
   env: "Webdocker-env"
-  bucket_name: "elasticbeanstalk-us-east-1-415040452715"
+  bucket_name: "elasticbeanstalk-ap-southeast-2-415040452715"
   bucker_path: "web-docker"
   on:
     branch: main

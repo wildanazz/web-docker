@@ -16,4 +16,3 @@ deploy:
   bucker_path: "web-docker"
   on:
     branch: main
-  

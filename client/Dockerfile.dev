@@ -5,4 +5,5 @@ RUN npm install
 RUN chown -R node:node node_modules
 COPY . .
 USER node
+EXPOSE 80
 CMD ["npm", "start"]

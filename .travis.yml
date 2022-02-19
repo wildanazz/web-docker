@@ -5,13 +5,10 @@ before_install:
   - cd client && docker build -t wildanazz/web-docker-client -f Dockerfile.dev .
 script:
   - docker run --env CI=true wildanazz/web-docker-client npm run test
-before_deploy: "echo $AWS_ACCESS_KEY"
 deploy:
   provider: elasticbeanstalk
-  access_key_id:
-    - secure: "$AWS_ACCESS_KEY"
-  secret_access_key:
-    - secure: "$AWS_SECRET_KEY"
+  access_key_id: "$AWS_ACCESS_KEY"
+  secret_access_key: "$AWS_SECRET_KEY"
   region: "us-east-1"
   app: "web-docker"
   env: "Webdocker-env"

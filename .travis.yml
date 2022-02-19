@@ -1,4 +1,4 @@
-language: generic
+language: node.js
 sudo: required
 services:
   - docker
@@ -17,4 +17,3 @@ deploy:
   bucker_path: "web-docker"
   on:
     branch: main
-  skip_cleanup: true

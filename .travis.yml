@@ -11,9 +11,9 @@ deploy:
   access_key_id: "$AWS_ACCESS_KEY"
   secret_access_key: "$AWS_SECRET_KEY"
   region: "ap-southeast-2"
-  app: "web-docker"
-  env: "Webdocker-env"
+  app: "Webdocker-env-2"
+  env: "Webdockerenv2-env"
   bucket_name: "elasticbeanstalk-ap-southeast-2-415040452715"
-  bucker_path: "web-docker"
+  bucker_path: "web-docker-2"
   on:
     branch: main

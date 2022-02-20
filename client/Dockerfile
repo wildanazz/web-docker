@@ -3,7 +3,7 @@ WORKDIR /home/node/app
 COPY package*.json ./
 RUN npm install
 RUN chown -R node:node node_modules
-COPY . .
+COPY ./ ./
 USER node
 RUN npm run build
 

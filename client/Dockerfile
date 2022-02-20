@@ -5,7 +5,7 @@ RUN npm install
 RUN chown -R node:node node_modules
 COPY . .
 USER node
-CMD [ "npm", "run", "build"]
+RUN [ "npm", "run", "build"]
 
 FROM nginx
 EXPOSE 80
